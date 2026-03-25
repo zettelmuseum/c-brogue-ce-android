@@ -10,6 +10,10 @@ Changes:
 - Android Menu overlay, including a mouse toggle.
 - Swipe gestures for movement.
 
+APK Releases:
+- Get them here!
+  https://github.com/tyrannotorus/c-brogue-ce-android/releases
+
 ![Screenshot_20260323_201423_Brogue CE](https://github.com/user-attachments/assets/281b4ae6-6d50-456d-9471-6492a44f94d1)
 
 ![Screenshot_20260323_201537_Brogue CE](https://github.com/user-attachments/assets/e8f7780e-d3c8-4f26-9532-354069f86d1c)
