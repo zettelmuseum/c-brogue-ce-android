@@ -14,6 +14,9 @@ Changes:
 
 ![Screenshot_20260323_201537_Brogue CE](https://github.com/user-attachments/assets/e8f7780e-d3c8-4f26-9532-354069f86d1c)
 
+![Screenshot_20260325_172922_Brogue CE](https://github.com/user-attachments/assets/98802c15-6f99-4b3e-8fac-86b3b8691b02)
+
+
 Brogue CE
 =========
 
