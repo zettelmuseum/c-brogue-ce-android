@@ -210,6 +210,9 @@ public class BrogueActivity extends SDLActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+getWindow().addFlags(android.view.WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+getWindow().setNavigationBarColor(android.graphics.Color.TRANSPARENT);
+        
         super.onCreate(savedInstanceState);
 getWindow().setDecorFitsSystemWindows(false);
         // ===== Game overlay =====
