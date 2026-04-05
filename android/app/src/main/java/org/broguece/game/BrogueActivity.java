@@ -305,13 +305,17 @@ getWindow().setDecorFitsSystemWindows(false);
         
         // After: rebuildToolbar();
 
-bottomGroup.setOnApplyWindowInsetsListener((v, insets) -> {
-    int navBarHeight = insets.getSystemWindowInsetBottom();
-    FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) v.getLayoutParams();
-    lp.bottomMargin = navBarHeight;
-    v.setLayoutParams(lp);
-    return insets.consumeSystemWindowInsets();
-});
+
+
+       bottomGroup.setOnApplyWindowInsetsListener((v, insets) -> {
+            int navBottom = insets.getSystemWindowInsetBottom();
+            int navRight  = insets.getSystemWindowInsetRight();
+            FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) v.getLayoutParams();
+            lp.bottomMargin = navBottom;
+            lp.rightMargin  = navRight;
+            v.setLayoutParams(lp);
+            return insets.consumeSystemWindowInsets();
+        }); 
         
 
         gameOverlay.setVisibility(View.GONE);
