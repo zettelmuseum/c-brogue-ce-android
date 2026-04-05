@@ -507,9 +507,14 @@ bottomGroup.setOnApplyWindowInsetsListener((v, insets) -> {
         FrameLayout.LayoutParams scrollParams = new FrameLayout.LayoutParams(
             panelWidth, FrameLayout.LayoutParams.WRAP_CONTENT,
             Gravity.BOTTOM | Gravity.END);
-        scrollParams.setMargins(0, dpToPx(8), dpToPx(8), dpToPx(52));
-
-        inventoryOverlay.addView(scrollView, scrollParams);
+int navBottom = 0;
+android.view.WindowInsets rootInsets = inventoryOverlay.getRootWindowInsets();
+if (rootInsets != null) {
+    navBottom = rootInsets.getSystemWindowInsetBottom();
+}
+scrollParams.setMargins(0, dpToPx(8), dpToPx(8), dpToPx(52) + navBottom);
+        
+                inventoryOverlay.addView(scrollView, scrollParams);
         inventoryOverlay.setVisibility(View.VISIBLE);
 
         // Slide-up animation
@@ -622,8 +627,15 @@ bottomGroup.setOnApplyWindowInsetsListener((v, insets) -> {
         FrameLayout.LayoutParams scrollParams = new FrameLayout.LayoutParams(
             panelWidth, FrameLayout.LayoutParams.WRAP_CONTENT,
             Gravity.BOTTOM | Gravity.END);
-        scrollParams.setMargins(0, dpToPx(8), dpToPx(8), dpToPx(52));
 
+int navBottom = 0;
+android.view.WindowInsets rootInsets = inventoryOverlay.getRootWindowInsets();
+if (rootInsets != null) {
+    navBottom = rootInsets.getSystemWindowInsetBottom();
+}
+scrollParams.setMargins(0, dpToPx(8), dpToPx(8), dpToPx(52) + navBottom);
+
+        
         inventoryOverlay.addView(scrollView, scrollParams);
         inventoryOverlay.setVisibility(View.VISIBLE);
 
@@ -1023,8 +1035,15 @@ bottomGroup.setOnApplyWindowInsetsListener((v, insets) -> {
                 FrameLayout.LayoutParams scrollParams = new FrameLayout.LayoutParams(
                     panelWidth, FrameLayout.LayoutParams.MATCH_PARENT,
                     Gravity.END);
-                scrollParams.setMargins(0, dpToPx(8), 0, dpToPx(52));
 
+int navBottom = 0;
+android.view.WindowInsets rootInsets = inventoryOverlay.getRootWindowInsets();
+if (rootInsets != null) {
+    navBottom = rootInsets.getSystemWindowInsetBottom();
+}
+scrollParams.setMargins(0, dpToPx(8), dpToPx(8), dpToPx(52) + navBottom);
+
+                
                 inventoryOverlay.addView(scrollView, scrollParams);
                 inventoryOverlay.setVisibility(View.VISIBLE);
 
