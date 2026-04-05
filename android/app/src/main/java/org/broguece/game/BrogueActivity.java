@@ -1,8 +1,5 @@
 package org.broguece.game;
 
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
 
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
@@ -308,12 +305,12 @@ public class BrogueActivity extends SDLActivity {
         
         // After: rebuildToolbar();
 
-ViewCompat.setOnApplyWindowInsetsListener(bottomGroup, (v, insets) -> {
-    int navBarHeight = insets.getInsets(WindowInsetsCompat.Type.navigationBars()).bottom;
+bottomGroup.setOnApplyWindowInsetsListener((v, insets) -> {
+    int navBarHeight = insets.getSystemWindowInsetBottom();
     FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) v.getLayoutParams();
     lp.bottomMargin = navBarHeight;
     v.setLayoutParams(lp);
-    return insets;
+    return insets.consumeSystemWindowInsets();
 });
         
 
