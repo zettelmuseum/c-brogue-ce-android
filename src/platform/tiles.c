@@ -958,7 +958,7 @@ void resizeWindow(int width, int height) {
     if (height < 0) height = width * 10/16;
 
     // go to fullscreen mode if the window is as big as the screen
-    if (width >= mode.w && height >= mode.h) fullScreen = true;
+    fullScreen = true;
 
     if (Win == NULL) {
         // create the window
