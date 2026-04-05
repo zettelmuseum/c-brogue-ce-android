@@ -511,9 +511,8 @@ getWindow().setDecorFitsSystemWindows(false);
         FrameLayout.LayoutParams scrollParams = new FrameLayout.LayoutParams(
             panelWidth, FrameLayout.LayoutParams.WRAP_CONTENT,
             Gravity.BOTTOM | Gravity.END);
-int navBottom = 0;
 
-   android.view.WindowInsets rootInsets = inventoryOverlay.getRootWindowInsets();
+android.view.WindowInsets rootInsets = inventoryOverlay.getRootWindowInsets();
 int navBottom = rootInsets != null ? rootInsets.getSystemWindowInsetBottom() : 0;
 int navRight  = rootInsets != null ? rootInsets.getSystemWindowInsetRight()  : 0;
 scrollParams.setMargins(0, dpToPx(8), dpToPx(8) + navRight, dpToPx(52) + navBottom);     
@@ -633,7 +632,7 @@ scrollParams.setMargins(0, dpToPx(8), dpToPx(8) + navRight, dpToPx(52) + navBott
             panelWidth, FrameLayout.LayoutParams.WRAP_CONTENT,
             Gravity.BOTTOM | Gravity.END);
 
-int navBottom = 0;
+
 
 android.view.WindowInsets rootInsets = inventoryOverlay.getRootWindowInsets();
 int navBottom = rootInsets != null ? rootInsets.getSystemWindowInsetBottom() : 0;
@@ -1039,7 +1038,7 @@ scrollParams.setMargins(0, dpToPx(8), dpToPx(8) + navRight, dpToPx(52) + navBott
                     panelWidth, FrameLayout.LayoutParams.MATCH_PARENT,
                     Gravity.END);
 
-int navBottom = 0;
+
 android.view.WindowInsets rootInsets = inventoryOverlay.getRootWindowInsets();
 int navBottom = rootInsets != null ? rootInsets.getSystemWindowInsetBottom() : 0;
 int navRight  = rootInsets != null ? rootInsets.getSystemWindowInsetRight()  : 0;
