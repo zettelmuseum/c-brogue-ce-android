@@ -211,7 +211,7 @@ public class BrogueActivity extends SDLActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+getWindow().setDecorFitsSystemWindows(false);
         // ===== Game overlay =====
         gameOverlay = new FrameLayout(this);
 
